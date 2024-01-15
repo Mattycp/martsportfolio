@@ -59,7 +59,7 @@
                                 Photoshop, HTML e CSS. Adoro unir criatividade e tecnologia para criar 
                                 experiências visuais envolventes na web.
                             </p>
-                            <a href="#" class="btn">Baixe meu CV </a>
+                            <a href="images/CV 11.2023 Mateus Correia Paulino.pdf" class="btn" download>Baixe meu CV </a>
                         </div>
 
                         <div class="home-img padd-15">
@@ -98,7 +98,7 @@
                                 <div class="personal-info padd-15">
                                     <div class="row">
                                         <div class="info-item padd-15">
-                                            <p>Birthday : <span>17 Jul 2006</span></p>
+                                            <p>Nasc. : <span>17 Jul 2006</span></p>
                                         </div>
                                         
                                         <div class="info-item padd-15">
@@ -129,7 +129,7 @@
                                     </div>
                                 </div>
 
-                                <div class="skills padd-15">
+                                <!-- <div class="skills padd-15">
                                     <div class="row">
                                         <div class="skill-item padd-15">
                                             <h5>Illustrator</h5>
@@ -163,7 +163,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
 
                             <div class="row">
@@ -541,6 +541,7 @@
                     <div class="row">
                         
                         <!-- Informações de contato -->
+                        
                         <div class="contact-info-item padd-15">
                             <div class="icon"><i class="fa fa-phone"></i></div>
                             <h4>Meu número</h4>
@@ -564,7 +565,7 @@
                             <h4>Cidade</h4>
                             <p>Barueri / SP</p>
                         </div>
-
+                        
                     </div>
 
                     <h3 class="contact-title padd-15">Me envie uma mensagem</h3>
@@ -572,43 +573,52 @@
 
                     <div class="row">
                         <div class="contact-form padd-15">
+
+                            <form action="https://formsubmit.co/ajax/mateuscorreiapaulino@gmail.com" target="_blank" method="post" data-form>
+                            
                             <div class="row">
 
                                 <div class="form-item col-6 padd-15">
-                                    <div class="fomt-group">
-                                        <input type="text" class="form-control" placeholder="Nome">
+                                    <div class="form-group">
+                                        <input type="text" name="Nome" class="form-control" placeholder="Nome" required>
                                     </div>
                                 </div>
 
                                 <div class="form-item col-6 padd-15">
-                                    <div class="fomt-group">
-                                        <input type="email" class="form-control" placeholder="Email">
+                                    <div class="form-group">
+                                        <input type="email" name="Email" class="form-control" placeholder="Email" required>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="form-item col-12 padd-15">
-                                    <div class="fomt-group">
-                                        <input type="text" class="form-control" placeholder="Assunto">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="Assunto" placeholder="Assunto">
                                     </div>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="form-item col-12 padd-15">
-                                    <div class="fomt-group">
-                                        <textarea name="" class="form-control" placeholder="Message"></textarea>
+                                    <div class="form-group">
+                                        <textarea name="Mensagem" class="form-control" placeholder="Mensagem" required></textarea>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="form-item col-12 padd-15">
-                                    <button type="submit" class="btn">Enviar mensagem</button>
+                                    <button type="submit" onclick="success()" class="btn" data-button>Enviar mensagem</button>
                                 </div>
                             </div>
 
+                            <input type="hidden" name="_next" value="#">
+                            <input type="text" name="_honey" style="display: none;">
+                            <input type="hidden" name="_subject" value="Nova mensagem | Contato portfolio">
+                            <input type="hidden" name="_captcha" value="false">
+                        </form>
+                        
                         </div>
                     </div>
 
@@ -639,6 +649,7 @@
 
     <!-- Java Script-->
     <script src="js/mixitup.min.js"></script>
+    <script src="js/app.js"></script>
     <script src="js/script.js"></script>
     <script src="js/style-switcher.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
@@ -646,7 +657,7 @@
     <!-- Animação de Typing -->
     <script>
         var typed = new Typed(".typing", {
-    strings:["","Web Designer", "Dev Front-End", "Designer Gráfico"],
+    strings:[".","Web Designer", "Dev Front-End", "Designer Gráfico"],
     typeSpeed:100,
     backSpeed:60,
     loop:true
