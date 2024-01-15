@@ -995,6 +995,34 @@ h3.my-profession{
 }
 
 
+@media (max-width:1025px){
+    .home-img img{
+        display: block;
+        max-width: 300px;
+        max-height: 300px;
+    }.home-img::before{
+        position: fixed;
+        content: '';
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        border-top: 10px solid var(--skin-color);
+        border-left: 10px solid var(--skin-color);
+        left: -5px;
+        top: -20px;
+    }.home-img::after{
+        position: fixed;
+        content: '';
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        border-bottom: 10px solid var(--skin-color);
+        border-right: 10px solid var(--skin-color);
+        right: -35px;
+        bottom: 215px;
+    }
+}
+
 
 @media (max-width:991px){
     .contact .contact-info-item,
@@ -1004,14 +1032,48 @@ h3.my-profession{
     }
 
     .home .home-info{
-        flex: 0 0 100%;
-        max-width: 100%;
+        flex: 0 0 50%;
+        max-width: 50%;
     }
 
-    
+    .home-img img{
+        display: block;
+        max-width: 300px;
+        max-height: 300px;
+    }.home-img::before{
+        position: fixed;
+        content: '';
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        border-top: 10px solid var(--skin-color);
+        border-left: 10px solid var(--skin-color);
+        left: -5px;
+        top: -20px;
+    }.home-img::after{
+        position: fixed;
+        content: '';
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        border-bottom: 10px solid var(--skin-color);
+        border-right: 10px solid var(--skin-color);
+        right: -50px;
+        bottom: 240px;
+    }
 }
 
-@media (max-width:768px){
+@media (max-width:769px){
+    .service .section-title .pc{
+        display: none;
+    }
+    
+    .service .section-title .mobile{
+        display: block;
+        margin-top: 20px;
+        color: var(--text-black-700);
+    }
+
     .home .home-info{
         display: block;
         flex: 0 0 50%;
@@ -1031,7 +1093,7 @@ h3.my-profession{
         width: 50px;
         border-top: 10px solid var(--skin-color);
         border-left: 10px solid var(--skin-color);
-        left: 0;
+        left: -5px;
         top: -20px;
     }.home-img::after{
         content: '';
@@ -1040,7 +1102,7 @@ h3.my-profession{
         width: 50px;
         border-bottom: 10px solid var(--skin-color);
         border-right: 10px solid var(--skin-color);
-        right: 0;
+        right: -30px;
         bottom: 215px;
     }
 
@@ -1134,9 +1196,9 @@ h3.my-profession{
     .home-img img{
         position: relative;
         display: block;
-        max-width: 200px;
-        max-height: 200px;
-        bottom: 510px;
+        max-width: 160px;
+        max-height: 160px;
+        bottom: 490px;
         left: 210px;
     }.home-img::before{
         display: none;
@@ -1169,9 +1231,9 @@ h3.my-profession{
     .home-img img{
         position: relative;
         display: block;
-        max-width: 170px;
-        max-height: 170px;
-        bottom: 600px;
+        max-width: 150px;
+        max-height: 150px;
+        bottom: 540px;
         left: 170px;
     }.home-img::before{
         display: none;
@@ -1187,7 +1249,7 @@ h3.my-profession{
         justify-content: center;
         margin-top: 10px;
         text-align: center;
-        font-size: 23px;
+        font-size: 22px;
     }
 
     .home .home-info .name{
@@ -1220,10 +1282,10 @@ h3.my-profession{
     .home-img img{
         position: relative;
         display: flex;
-        max-width: 150px;
-        max-height: 150px;
-        bottom: 460px;
-        left: 150px;
+        max-width: 130px;
+        max-height: 130px;
+        bottom: 445px;
+        left: 140px;
     }.home-img::before{
         display: none;
     }.home-img::after{
