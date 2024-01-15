@@ -361,8 +361,8 @@ h3.my-profession{
     width: 80px;
     border-bottom: 10px solid var(--skin-color);
     border-right: 10px solid var(--skin-color);
-    right: 20px;
-    bottom: -40px;
+    right: 0px;
+    bottom: -25px;
 }.home-img::before{
     content: '';
     position: absolute;
@@ -370,7 +370,7 @@ h3.my-profession{
     width: 80px;
     border-top: 10px solid var(--skin-color);
     border-left: 10px solid var(--skin-color);
-    left: 20px;
+    left: 0px;
     top: -40px;
 }
 
@@ -583,6 +583,15 @@ h3.my-profession{
     padding-bottom: 40px;
 }
 
+.service .section-title .pc{
+    margin-top: 20px;
+    color: var(--text-black-700);
+}
+
+.service .section-title .mobile{
+    display: none;
+}
+
 .service .service-item{
     margin-bottom: 30px;
     flex: 0 0 33.33%;
@@ -598,8 +607,22 @@ h3.my-profession{
     transition: all 0.3s ease;
 }
 
+.service .service-item .service-item-inner p{
+    display: none;
+
+}
+
+.service .service-item .service-item-inner:hover p{
+    display: block;
+}
+
+
 .service .service-item .service-item-inner:hover{
     box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+
+.dark .service .service-item .service-item-inner:hover{
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
 }
 
 .service .service-item .service-item-inner .icon{
@@ -1103,8 +1126,9 @@ h3.my-profession{
 
     .home .home-info .typing{
         position: relative;
-        display: flex;
+        display: block;
         font-size: 17px;
+        margin-left: 5px;
     }
 
     .home-img img{
