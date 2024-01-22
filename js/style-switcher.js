@@ -13,6 +13,7 @@ window.addEventListener("scroll", () =>{
 
 /* ====================================== cores do tema ==================================*/
 const alternateStyles = document.querySelectorAll(".alternate-style");
+
 function setActiveStyle(color){
     alternateStyles.forEach((style) => {
         if(color === style.getAttribute("title")){
@@ -26,11 +27,29 @@ function setActiveStyle(color){
 /* ====================================== tema claro e escuro ==================================*/
 const dayNight = document.querySelector(".day-night");
 
+// Ativar dark mode (Função)
+function toggleDarkMode(){
+    document.body.classList.toggle("dark");
+}// Salvar dark mode
+function saveDarkMode(){
+    if(document.body.classList.contains("dark")){
+        localStorage.setItem("dark", 1);
+    }else{
+        localStorage.removeItem("dark");
+    }
+}
+
+// Evento de Click no icone do dark mode
 dayNight.addEventListener("click", () =>{
     dayNight.querySelector("i").classList.toggle("fa-sun");
     dayNight.querySelector("i").classList.toggle("fa-moon");
-    document.body.classList.toggle("dark")
+    toggleDarkMode();
+    saveDarkMode();
 })
+
+
+
+  loadTheme();
 
 window.addEventListener("load", () =>{
     if(document.body.classList.contains("dark")){
@@ -39,3 +58,13 @@ window.addEventListener("load", () =>{
         dayNight.querySelector("i").classList.add("fa-moon");
     }
 })
+
+function loadTheme() {
+    const darkMode = localStorage.getItem("dark");
+  
+    if (darkMode) {
+      toggleDarkMode();
+    }
+  }
+
+  

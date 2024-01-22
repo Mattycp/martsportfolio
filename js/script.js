@@ -63,6 +63,8 @@ const nav = document.querySelector(".nav"),
                 }
             })
         }
+
+        
         function removeBackSection(){
             for(let i=0; i<totalSection; i++){
                 allSection[i].classList.remove("back-section");
